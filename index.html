@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Currency Exchange With Travel FX</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="shortcut icon" href="letter-c.png" type="image/x-icon">
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container-fluid text-center">
+        <div class="main">
+            <h1>Currency Calculator</h1>
+            <div class="row">
+                <h5>How would you like your currency?</h5>
+                <div class="col-sm-12 col-md-3">
+                    <div class="cards ca-1">
+                        <div class="icons c-1">
+                            <input class="form-check-input" type="radio" name="cash" id="cash">
+                            <img class="" src="./assets/money_631200.png" alt="">
+                            <label class="card-title" for="cash">Cash</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-12 col-md-3">
+                    <div class="cards">
+                        <div class="icons c-2">
+                            <input class="form-check-input" type="radio" name="cash" id="travel-card">
+                            <img class="" src="./assets/pay_10091795.png" alt="">
+                            <label class="card-title" for="travel-card">Travel money card</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-3">
+                    <div class="cards">
+                        <div class="icons c-3">
+                            <input class="form-check-input" type="radio" name="cash" id="travel-insu">
+                            <img class="" src="./assets/safe-flight_8096808.png" alt="">
+                            <label class="card-title" for="travel-insu">Travel Insurance</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-3 h-card ">
+                    <div class="cards ">
+                        <div class="icons c-4">
+                            <input class="form-check-input" type="radio" name="cash" id="prepaid-card">
+                            <img class="" src="./assets/bill_10141484.png" alt="">
+                            <label class="card-title" for="prepaid-card">Prepaid card</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-xs-12 col-md-4">
+                    <h5>Amount</h5>
+                    <div class="inp-el form-control-sm">
+                        <label for="amount"></label>
+                        <input type="number" id="amount">
+                        <button class="btn btn-outline-secondary" id="btn">Submit</button>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-md">
+                    <h5>From</h5>
+                    <div class="inp-el">
+                        <img id="img-1" src="" alt="">
+                        <select class="form-select" id="select-1" name="select-1">
+                            <option value="select">Select Base Country</option>
+                            <option value="inr">Indian Rupees (INR)</option>
+                            <option value="eur">Euros (EUR)</option>
+                            <option value="usd">United States Dollars (USD)</option>
+                            <option value="cad">Canadian (CAD) </option>
+                            <option value="aud">Australian Dollar (AUD)</option>
+                            <option value="aed">UAE Dirham (AED)</option>
+                            <option value="nzd">New Zealand Dollar (NZD)</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-md-1">
+                    <div class="img">
+                        <img id="up-and-down-arrow" src="./up-and-down-arrow (1).png" alt="">
+                    </div>
+                </div>
+                <div class="col-xs-12 col-md">
+                    <h5>To</h5>
+                    <div class="inp-el">
+                        <img id="img-2" src="" alt="">
+                        <select class="form-select" id="select-2" name="select-2">
+                            <option value="select">Select Country</option>
+                            <option value="eur" default>Euros (EUR)</option>
+                            <option value="inr">Indian Rupees (INR)</option>
+                            <option value="usd">United States Dollars (USD)</option>
+                            <option value="cad">Canadian (CAD) </option>
+                            <option value="aud">Australian Dollar (AUD)</option>
+                            <option value="aed">UAE Dirham (AED)</option>
+                            <option value="nzd">New Zealand Dollar (NZD)</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <h5>Delivery or Collection?</h5>
+                <div class="col-sm-12 col-md-3">
+                    <div class="cards">
+                        <div class="icons">
+                            <input class="form-check-input" type="radio" name="delivery" id="deliver">
+                            <img class="" src="./assets/fast-delivery.png" alt="">
+                            <label class="card-title" for="deliver">Delivery</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-3">
+                    <div class="cards">
+                        <div class="icons">
+                            <input class="form-check-input" type="radio" name="delivery" id="location-1">
+                            <img class="" src="./assets/location.png" alt="">
+                            <label class="card-title" for="location-1">Location</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row row-cash">
+                <div class="row-rate">
+                  <h5 id="row-item-1"></h5>
+                  <h5 id="row-item-2"></h5>
+                </div>
+                <div class="cash-fx">
+                    <img src="./assets/travel_fx_logo_2021.png" alt="">
+                </div>
+                <p id="amount-diff">Amount received (after accounting for delivery fees)</p>
+                <div class="change">
+                    <h1 id="h1-val-1"></h1>
+                    <h1 id="h1"></h1>
+                    <h1 id="h1-val-2"></h1>
+                    <h1>&nbsp; </h1>
+                    <h1 id="h1-2"></h1>
+                </div>
+            </div>
+
+            <!-- <button class="btn bg-warning">Show Results</button> -->
+
+        </div>
+    </div>
+
+
+
+
+    <!-- Bootstrap JavaScript Libraries -->
+    <script src="app.js"></script>
+</body>
+
+</html>
